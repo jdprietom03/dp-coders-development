@@ -1,0 +1,299 @@
+
+.output_status {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .status.accepted {
+    background-color: #028246;
+    border-radius: 6px;
+    padding: 0.1rem 0.5rem;
+    text-transform: capitalize;
+  }
+  .status.wa {
+    background-color: #ca0d0d;
+    border-radius: 6px;
+    padding: 0.1rem 0.5rem;
+    text-transform: capitalize;
+  }
+
+  
+.work_place {
+    overflow: scroll;
+    overflow-x: hidden;
+    grid-column-start: 2;
+    padding: 0 1rem;
+    max-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .editor {
+    z-index: 4;
+    width: calc(100% - 1.5rem);
+    position: absolute;
+    min-height: calc(300px - 0.5rem);
+    background-color: transparent;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    display: block;
+    overflow: hidden;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    color: transparent;
+    caret-color: white;
+    padding-left: 1.5rem;
+    font-family: monospace;
+    line-height: 1rem;
+    resize: none;
+    top: 0.5rem;
+  }
+  
+  .code {
+    min-height: 300px;
+    height: max-content;
+    overflow-x: scroll;
+    padding: 0;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .code > * {
+    padding-left: 1rem;
+    display: block;
+    line-height: 1rem;
+  }
+  
+  .lines {
+    content: '';
+    z-index: 10;
+    padding: 0.5rem 0.1rem;
+    background-color: rgba(13, 13, 54, 0.6);
+    width: max-content;
+    min-width: 1rem;
+    left: 0;
+    min-height: 300px;
+    height: max-content;
+    color: rgb(45, 45, 97);
+    position: absolute;
+    white-space: pre;
+    display: flex;
+    flex-direction: column;
+    line-height: 1rem;
+  }
+  
+  .lines span {
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .code_area {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .code_area::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(13, 13, 54, 0.6);
+    display: block;
+  }
+  
+  .code_area::-webkit-scrollbar-track {
+    border-radius: 8px;
+    display: block;
+    background-color: rgb(25, 25, 66);
+  }
+  
+  .code_area::-webkit-scrollbar-track-piece {
+    display: block;
+    background-color: rgb(25, 25, 66);
+    border-radius: 8px;
+  }
+  
+  .code_area::-webkit-scrollbar-corner {
+    display: none;
+  }
+  
+  .code_area::-webkit-scrollbar {
+    display: block;
+    width: 0.5rem;
+  }
+  
+  .code_area::-webkit-scrollbar:horizontal {
+    display: none;
+  }
+  
+  .output_container {
+    width: calc(100% - 1.6rem);
+    background-color: rgb(13, 13, 54);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: max-content;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    padding: 0.6rem 0.8rem;
+    z-index: 3;
+  }
+  
+  .output_area,
+  .output_area > * {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .output {
+    font-weight: 100;
+    height: 50px;
+    background-color: rgb(25, 25, 66);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.8rem;
+  }
+  
+  .buttons_container {
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
+  .buttons_container button {
+    padding: 0.6rem 1rem;
+    background-color: rgb(25, 25, 66);
+    border: none;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .buttons_container button:hover {
+    background-color: rgb(32, 32, 73);
+  }
+  
+  .work_place {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .selected {
+    background-color: rgb(32, 32, 73);
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    border: 2px solid rgb(35, 35, 87);
+    position: relative;
+    width: 10ch;
+  }
+  .select {
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+  }
+  
+  .option {
+    padding: 0.6rem 1rem;
+  }
+  
+  .option.active {
+    background-color: rgb(41, 41, 82);
+  }
+  
+  .option:hover {
+    background-color: rgb(38, 38, 77);
+  }
+  
+  .options {
+    position: absolute;
+    bottom: 90%;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: rgb(32, 32, 73);
+    cursor: pointer;
+    z-index: 3;
+    overflow-y: scroll;
+    transition: max-height ease-out 0.3s, opacity ease-in-out 0.3s;
+  }
+  
+  .options::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(13, 13, 54, 0.6);
+    display: block;
+  }
+  
+  .options::-webkit-scrollbar-track {
+    border-radius: 8px;
+    display: block;
+    background-color: rgb(25, 25, 66);
+  }
+  
+  .options::-webkit-scrollbar-track-piece {
+    display: block;
+    background-color: rgb(25, 25, 66);
+    border-radius: 8px;
+  }
+  
+  .options::-webkit-scrollbar-corner {
+    display: none;
+  }
+  
+  .options::-webkit-scrollbar {
+    display: block;
+    width: 0.5rem;
+  }
+  
+  .options::-webkit-scrollbar:horizontal {
+    display: none;
+  }
+  
+  .options.collapse {
+    max-height: calc(2.5 * 4rem);
+    opacity: 1;
+    transition: all ease-in 0.3s;
+  }
+  
+  .select svg {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: calc(50% - 0.4rem);
+    right: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .select .options.collapse ~ svg {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+  }
+  
+  .loading_code {
+    filter: brightness(0.8);
+  }
+
+  .input textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+  }
+  

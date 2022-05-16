@@ -1,0 +1,17 @@
+{
+    "54": {
+      "tag": "c++",
+      "name": "C++",
+      "template": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n\n    return 0;\n}"
+    },
+    "63": {
+      "tag": "javascript",
+      "name": "JavaScript",
+      "template": "function main(){\n\t//Solution here...\n}"
+    },
+    "71": {
+      "tag": "python",
+      "name": "Python",
+      "template": "def main():\n    #Solution here...\n    pass"
+    }
+  }  

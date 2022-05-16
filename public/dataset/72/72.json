@@ -1,0 +1,23 @@
+{
+    "72": {
+      "title": "Division?",
+      "timeLimit": 1,
+      "memoryLimit": 256,
+      "content": [
+        "Codeforces separates its users into 4 divisions by their rating:",
+        "For Division 1: 1900 ≤ rating",
+        "For Division 2: 1600 ≤ rating ≤1899",
+        "For Division 3: 1400 ≤ rating ≤1599",
+        "For Division 4: rating ≤ 1399",
+        "Given a rating, print in which division the rating belongs."
+      ],
+      "difficult": "EASY",
+      "categories": ["*800", "implementation"]      ,
+      "examples":  [
+        {
+          "input": "3\n10 4\n12 6\n179 822", 
+          "output": "10\n4\n179"
+        }
+      ]
+    }
+}

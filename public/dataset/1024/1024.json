@@ -1,0 +1,12 @@
+{
+    "1024": {
+      "title": "Triple",
+      "timeLimit": 1,
+      "memoryLimit": 256,
+      "content": [
+        "Given an array a of n elements, print any value that appears at least three times or print -1 if there is no such value."
+      ],
+      "difficult": "EASY",
+      "categories": ["sortings", "implementation", "*800"]      
+    }
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,400;0,600;0,700;1,100;1,400;1,700&display=swap');
+
+.dark {
+  color: white;
+  background: rgb(11, 14, 34);
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: inherit;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 100vh;
+}
+
+.problem_viewer {
+  font-family: 'Urbanist', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  border-right: 1px solid rgb(50, 45, 85);
+  padding: 2rem 1.4rem;
+  gap: 1rem;
+  grid-column-start: 1;
+}
+
+.problem_viewer::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0;
+  background-color: rgba(25, 25, 66, 0.6);
+}
+
+
+.problem_viewer::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: rgba(50, 45, 85, 0.7);
+  border-radius: 8px;
+}
+
+.problem_viewer .title {
+  font-size: 2rem;
+}
+
+.problem_viewer .content {
+  font-weight: 300;
+}
+
+.problem_viewer .examples {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.examples .example {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.example span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.example .input {
+  font-weight: 100;
+  background-color: rgb(25, 25, 66);
+  border-radius: 6px;
+  display: flex;
+  padding: .4rem 0.8rem;
+  flex-direction: column;
+}
+
+.example .output {
+  font-weight: 100;
+  background-color: rgb(25, 25, 66);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.8rem;
+}
+
+.EASY {
+  background-color: #028246;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  text-transform: capitalize;
+}
+
+.MEDIUM {
+  background-color: #ffb400;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  text-transform: capitalize;
+}
+
+.HARD {
+  background-color: #ff0000;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  text-transform: capitalize;
+}
+
+.difficult {
+  display: inline-flex;
+  gap: 0.4rem;
+  padding-right: 1.2rem;
+}
+
+.tags {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  background-color: rgb(25, 25, 66);
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  text-transform: capitalize;
+}
+
+.input textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.input .line,.output .line{
+  display: block;
+  font-weight: 300;
+  font-size: 1rem;
+}
